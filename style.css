@@ -332,28 +332,6 @@ body {
   }
 }
 
-.phone {
-  width: 100%;
-  padding: 13px 0;
-  color: #fff;
-  text-align: center;
-  background: rgb(209, 171, 112);
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 25.2px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.phone:hover {
-  background: rgb(186, 144, 78);
-}
-@media (width < 1024px) {
-  .phone {
-    font-size: 14px;
-    line-height: 17.64px;
-  }
-}
-
 .hero-wrapper {
   padding: 0 168px 0 87px;
   background: linear-gradient(356.2deg, #0C121E 0%, rgba(12, 18, 30, 0.933333) 134.51%);

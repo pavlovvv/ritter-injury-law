@@ -31,10 +31,17 @@
     <script src="https://cdn.jsdelivr.net/npm/1@11/swiper-bundle.min.js" defer></script>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="phone.css" media="print" onload="this.media='all'">
+
+    <style>
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>
-
     <div class="header-wrapper">
         <header class="header wrapper">
             <a href="./"> <img loading="lazy" src="./img/logo.svg" alt="Ritter Injury Law logo" /> </a>
@@ -59,25 +66,25 @@
                         <div class="line2"></div>
                         <div class="line3"></div>
                     </div>
-                    <div class="burger__menu" aria-hidden="true">
+                    <div class="burger__menu">
                         <ul class="header__list">
                             <li class="header__item">
-                                <a href="./#home" class="header__link">Home</a>
+                                <a href="./#home" class="header__link" aria-hidden="true">Home</a>
                             </li>
                             <li class="header__item">
-                                <a href="#gallery" class="header__link">Practice areas</a>
+                                <a href="#gallery" class="header__link" aria-hidden="true">Practice areas</a>
                             </li>
                             <li class="header__item">
-                                <a href="#serv" class="header__link">Reviews</a>
+                                <a href="#serv" class="header__link" aria-hidden="true">Reviews</a>
                             </li>
                             <li class="header__item">
-                                <a href="#how" class="header__link">Results</a>
+                                <a href="#how" class="header__link" aria-hidden="true">Results</a>
                             </li>
                             <li class="header__item">
-                                <a href="#formik" class="header__link">Location</a>
+                                <a href="#formik" class="header__link" aria-hidden="true">Location</a>
                             </li>
                             <li class="header__item">
-                                <a href="#rev" class="header__link">Contact us</a>
+                                <a href="#rev" class="header__link" aria-hidden="true">Contact us</a>
                             </li>
                         </ul>
 
@@ -137,7 +144,7 @@
                         we don't win you money, we get paid nothing.
                     </h3>
 
-                    <a href="#myForm"><button class="main-button main-button_hero" tabindex="1">Click to Call Now for
+                    <a href="#myForm"><button class="main-button main-button_hero" tabindex="-1">Click to Call Now for
                             Free Case
                             Analysis</button></a>
                 </div>
@@ -190,7 +197,7 @@
                 Find out how much your injury claim is worth.
             </p>
 
-            <a href="#myForm"> <button class="main-button main-button_default" tabindex="1">
+            <a href="#myForm"> <button class="main-button main-button_default" tabindex="-1">
                     Click for free case analysis
                 </button> </a>
 
@@ -241,9 +248,9 @@
                 <div class="benefits__middle">
                     <h2 class="benefits__middle-heading">Florida workers’ compensation can be frustrating and hard to
                         navigate without a lawyer. </h2>
-                    <h4 class="benefits__middle-text">Ritter Injury law helps you with every step to recover the most
+                    <h3 class="benefits__middle-text">Ritter Injury law helps you with every step to recover the most
                         for
-                        your injury – we’re fast, effective, and free unless you win. </h4>
+                        your injury – we’re fast, effective, and free unless you win. </h3>
                 </div>
 
                 <div class="benefits__bottom">
@@ -405,9 +412,9 @@
                         the CEO of a private equity firm managing over $100MM.
                     </p>
 
-                    <h4 class="about__text_bold">Call now for a fast and free case evaluation.</h4>
+                    <h3 class="about__text_bold">Call now for a fast and free case evaluation.</h3>
 
-                    <a href="#myForm"><button class="main-button main-button_default" tabindex="1">
+                    <a href="#myForm"><button class="main-button main-button_default" tabindex="-1">
                             Click for free case analysis
                         </button> </a>
                 </div>
@@ -453,7 +460,7 @@
                     </div>
                 </div>
 
-                <div class="portfolio-mobile swiper-container portfolio-swiper reviews__cards" aria-hidden="true">
+                <div class="portfolio-mobile swiper-container portfolio-swiper reviews__cards">
                     <div class="swiper-wrapper">
                         <!-- Slide 1 -->
                         <div class="swiper-slide portfolio__card fade-in">
@@ -515,7 +522,7 @@
                 <h1 class="last__heading">Ready to find out how much your injury is worth?</h1>
 
                 <a href="#myForm" style="max-width: 360px; width: 100%;"><button
-                        class="main-button main-button_default fade-in" tabindex="1">
+                        class="main-button main-button_default fade-in" tabindex="-1">
                         Click to Call
                     </button></a>
             </section>
@@ -524,8 +531,8 @@
         <div class="wrapper_bg-grey">
             <section class="contacts">
                 <div class="contacts__left">
-                    <h3 class="contacts__heading">You deserve the most
-                        money for your injury.</h3>
+                    <h4 class="contacts__heading">You deserve the most
+                        money for your injury.</h4>
 
                     <div class="contacts-pc">
                         <h4 class="contacts__info">Contact Information</h4>
@@ -569,22 +576,23 @@
                     </form>
                 </div>
 
-                <div class="contacts-mobile" aria-hidden="true">
-                    <h4 class="contacts__info">Contact Information</h4>
+                <div class="contacts-mobile">
+                    <h4 class="contacts__info" aria-hidden="true">Contact Information</h4>
 
                     <div class="contacts__item">
                         <img src="./img/contacts-phone.svg" width="32" height="32" loading="lazy" alt="contacts-icon">
-                        <a href="tel:786-850-8985">(786) 850-8985</a>
+                        <a href="tel:786-850-8985" aria-hidden="true">(786) 850-8985</a>
                     </div>
 
                     <div class="contacts__item">
                         <img src="./img/contacts-mail.svg" width="32" height="32" loading="lazy" alt="contacts-icon">
-                        <a href="mailto:travis@ritterinjurylaw.com">travis@ritterinjurylaw.com</a>
+                        <a href="mailto:travis@ritterinjurylaw.com" aria-hidden="true">travis@ritterinjurylaw.com</a>
                     </div>
 
                     <div class="contacts__item">
                         <img src="./img/contacts-map.svg" width="32" height="32" loading="lazy" alt="contacts-icon">
-                        <a href="https://maps.app.goo.gl/c3phFpDUByazQLYb8">9100 S Dadeland Blvd, Suite 1500, Miami, FL
+                        <a href="https://maps.app.goo.gl/c3phFpDUByazQLYb8" aria-hidden="true">9100 S Dadeland Blvd,
+                            Suite 1500, Miami, FL
                             33156</a>
                     </div>
                 </div>
