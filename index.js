@@ -108,57 +108,69 @@ document.addEventListener("DOMContentLoaded", function () {
     const nameInput = document.getElementById("name");
     const phoneInput = form.querySelector('input[name="phone_number"]');
     const emailInput = document.getElementById("email");
-
-    const nameError = document.getElementById("nameError");
-    const emailError = document.getElementById("emailError");
+    const generalErrorsContainer = document.getElementById("generalErrors");
 
     clearErrors();
 
     let isValid = true;
+    const errors = []; // Массив для сбора ошибок
 
+    // Проверка имени
     if (nameInput.value.trim() === "") {
-      showError(nameInput, nameError, "Full Name is required.");
+      showInputError(nameInput);
+      errors.push("Please fill the name field");
       isValid = false;
     } else if (nameInput.value.trim().length < 2) {
-      showError(nameInput, nameError, "Name must be at least 2 characters.");
+      showInputError(nameInput);
+      errors.push("Name must be at least 2 characters.");
       isValid = false;
     }
 
+    // Проверка телефона
     if (phoneInput.value.trim() === "") {
-      showError(phoneInput, null, "Phone is required");
+      showInputError(phoneInput);
+      errors.push("Please fill the phone field");
       isValid = false;
     }
 
+    // Проверка email
     if (!validateEmail(emailInput.value.trim())) {
-      showError(emailInput, emailError, "Please enter a valid email address.");
+      showInputError(emailInput);
+      errors.push("Please enter a valid email address.");
       isValid = false;
     }
 
-    if (isValid) {
+    // Генерация сообщений на основе комбинаций ошибок
+    if (errors.length > 0) {
+      const uniqueErrors = [...new Set(errors)]; // Убираем дубли
+      if (errors.length === 3) {
+        generalErrorsContainer.textContent =
+          "Please fill in name, phone and email fields";
+      } else {
+        generalErrorsContainer.textContent = uniqueErrors.join(" ");
+      }
+    } else {
+      generalErrorsContainer.textContent = "";
       alert("Form submitted successfully!");
       form.submit();
     }
   });
 
+  // Функция для очистки ошибок
   function clearErrors() {
-    const errorMessages = document.querySelectorAll(".error-message");
-    errorMessages.forEach((error) => (error.textContent = ""));
+    const generalErrorsContainer = document.getElementById("generalErrors");
+    generalErrorsContainer.textContent = ""; // Очищаем общий блок ошибок
+
     const inputs = form.querySelectorAll(".error");
     inputs.forEach((input) => input.classList.remove("error"));
   }
 
-  function showError(input, errorBlock, message) {
-    input.classList.add("error");
-    if (errorBlock) {
-      errorBlock.textContent = message;
-    } else {
-      const error = document.createElement("div");
-      error.className = "error-message";
-      error.textContent = message;
-      input.parentNode.appendChild(error);
-    }
+  // Добавление класса ошибки для полей
+  function showInputError(input) {
+    input.classList.add("error"); // Красная рамка для поля
   }
 
+  // Проверка email с помощью регулярного выражения
   function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);

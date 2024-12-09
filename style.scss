@@ -283,6 +283,12 @@ body {
       color: $gold;
     }
   }
+
+  @media (width <=768px) {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+  }
 }
 
 .header-drawer-button {
@@ -327,12 +333,6 @@ body {
   right: 0px;
   opacity: 1;
   visibility: visible;
-
-  @media (width <=768px) {
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-  }
 }
 
 .burger__menu-footer {
@@ -730,7 +730,7 @@ body {
   width: 552px;
   height: 526px;
   border-radius: 24px;
-  bottom: 100px;
+  bottom: 60px;
 
   img {
     position: absolute;
@@ -1313,6 +1313,10 @@ body {
   justify-content: center;
   align-items: center;
   row-gap: 56px;
+
+  @media (width < 1024px) {
+    row-gap: 32px;
+  }
 }
 
 .last__heading {
@@ -1324,6 +1328,7 @@ body {
   @media (width < 1024px) {
     font-size: 28px;
     line-height: 33.6px;
+    max-width: 342px;
   }
 }
 
@@ -1410,6 +1415,7 @@ body {
     max-width: 249px;
     transition: all 0.3s ease;
     cursor: pointer;
+    color: rgba(37, 38, 40, 1);
 
     &:hover {
       color: $gold;
@@ -1481,6 +1487,7 @@ textarea {
   line-height: 16.8px;
   margin-top: 4px;
   margin-left: 16px;
+  position: absolute;
 }
 
 .footer-wrapper {

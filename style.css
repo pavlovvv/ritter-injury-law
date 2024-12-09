@@ -280,6 +280,13 @@ body {
 .burger__menu .header__link:hover {
   color: rgb(209, 171, 112);
 }
+@media (width <= 768px) {
+  .burger__menu {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+  }
+}
 
 .header-drawer-button {
   display: flex;
@@ -316,19 +323,34 @@ body {
   opacity: 1;
   visibility: visible;
 }
-@media (width <= 768px) {
-  .burger__menu.active {
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-  }
-}
 
 @media (width <= 768px) {
   .burger__menu-footer {
     flex-basis: 100%;
     display: flex;
     align-items: end;
+  }
+}
+
+.phone {
+  width: 100%;
+  padding: 13px 0;
+  color: #fff;
+  text-align: center;
+  background: rgb(209, 171, 112);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25.2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.phone:hover {
+  background: rgb(186, 144, 78);
+}
+@media (width < 1024px) {
+  .phone {
+    font-size: 14px;
+    line-height: 17.64px;
   }
 }
 
@@ -707,7 +729,7 @@ body {
   width: 552px;
   height: 526px;
   border-radius: 24px;
-  bottom: 100px;
+  bottom: 60px;
 }
 .description-photo img {
   position: absolute;
@@ -1281,6 +1303,11 @@ body {
   align-items: center;
   row-gap: 56px;
 }
+@media (width < 1024px) {
+  .last {
+    row-gap: 32px;
+  }
+}
 
 .last__heading {
   color: #fff;
@@ -1291,6 +1318,7 @@ body {
   .last__heading {
     font-size: 28px;
     line-height: 33.6px;
+    max-width: 342px;
   }
 }
 
@@ -1378,6 +1406,7 @@ body {
   max-width: 249px;
   transition: all 0.3s ease;
   cursor: pointer;
+  color: rgb(37, 38, 40);
 }
 .contacts__item a:hover {
   color: rgb(209, 171, 112);
@@ -1452,6 +1481,7 @@ textarea {
   line-height: 16.8px;
   margin-top: 4px;
   margin-left: 16px;
+  position: absolute;
 }
 
 .footer-wrapper {
