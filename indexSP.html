@@ -6,24 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ritter Injury Law</title>
     <meta name="description"
-        content="Ritter Injury Law – experienced Florida injury lawyer offering free consultations and no fees unless we win. Get the compensation you deserve for medical bills, lost wages, and personal injury claims.">
+        content="Ritter Injury Law – experimentado abogado de lesiones de la Florida que ofrece consultas gratuitas y sin honorarios a menos que ganemos. Obtenga la compensación que merece por facturas médicas, salarios perdidos y reclamaciones por lesiones personales.">
     <meta name="keywords"
-        content="injury lawyer, Florida personal injury attorney, free case evaluation, injury compensation, medical bills, lost wages, Ritter Injury Law, accident lawyer, personal injury claims, legal advice Florida, no win no fee lawyer">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+        content="abogado de lesiones, Florida abogado de lesiones personales, evaluación gratuita de casos, indemnización por lesiones, facturas médicas, salarios perdidos, Ritter Injury Law, abogado de accidentes, reclamaciones por lesiones personales, asesoramiento jurídico Florida, no ganar sin honorarios abogado">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="./img/logo.svg" as="image">
     <link rel="preload" href="./img/star.svg" as="image">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="./img/travis 1.webp" as="image">
+    <link rel="preload" href="./img/travis 2.webp" as="image">
+    <link rel="preload" href="./img/travis 3.webp" as="image">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"
+        media="print" onload="this.media='all'">
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="reset.css">
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="reset.css" media="print" onload="this.media='all'">
     <meta http-equiv="Cache-Control" content="public, max-age=31536000">
     <link rel="icon" href="./img/R.svg" type="image/x-icon">
 
     <!-- Swiper JS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print"
+        onload="this.media='all'">
+    <script src="https://cdn.jsdelivr.net/npm/1@11/swiper-bundle.min.js" defer></script>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -36,24 +41,26 @@
 
             <nav class="header__nav">
                 <ul class="header__nav-items">
-                    <li>INICIO</li>
-                    <li>ÁREAS DE ESPECIALIDAD</li>
-                    <li>OPINIONES</li>
-                    <li>LOGROS</li>
-                    <li>UBICACIONES</li>
-                    <li>CONTÁCTANOS</li>
+                    <li tabindex="0">INICIO</li>
+                    <li tabindex="0">ÁREAS DE ESPECIALIDAD</li>
+                    <li tabindex="0">OPINIONES</li>
+                    <li tabindex="0">LOGROS</li>
+                    <li tabindex="0">UBICACIONES</li>
+                    <li tabindex="0">CONTÁCTANOS</li>
                 </ul>
             </nav>
 
             <div class="header__end">
-                <a href="./indexSP.html"><button class="header__button header__button_sp"></button></a>
+                <a href="./" tabindex="0" aria-label="cambiar al inglés">
+                    <button class="header__button header__button_sp" tabindex="0"
+                        aria-label="cambiar al inglés"></button></a>
                 <div class="burger">
                     <div class="burger__icon">
                         <div class="line1"></div>
                         <div class="line2"></div>
                         <div class="line3"></div>
                     </div>
-                    <div class="burger__menu">
+                    <div class="burger__menu" aria-hidden="true">
                         <ul class="header__list">
                             <li class="header__item">
                                 <a href="./#home" class="header__link">INICIO</a>
@@ -75,12 +82,14 @@
                             </li>
                         </ul>
 
-                        <a class="header-drawer-button header-drawer-button_sp" href="./">
-                            <button class="header__button header__button_sp"></button>
+                        <a class="header-drawer-button header-drawer-button_sp" href="./"
+                            aria-label="cambiar al idioma inglés en el menú">
+                            <button class="header__button header__button_sp"
+                                aria-label="cambiar al idioma inglés en el menú"></button>
                         </a>
 
                         <div class="burger__menu-footer">
-                            <div class="phone">Llama Ahora 786-850-8985</div>
+                            <a class="phone" href="tel:786-850-8985" class="phone">Llama Ahora 786-850-8985</a>
                         </div>
                     </div>
                 </div>
@@ -88,13 +97,15 @@
         </header>
     </div>
 
-    <section class="phone">Llama Ahora 786-850-8985</section>
+    <a href="tel:786-850-8985">
+        <section class="phone">Llama Ahora 786-850-8985</section>
+    </a>
 
     <main>
         <div class="hero-wrapper">
             <section class="hero">
                 <div class="hero__left">
-                    <img src="./img/travis 1.webp" class="fade-in" alt="Travis" />
+                    <img src="./img/travis 1.webp" fetchpriority="high" loading="lazy" class="fade-in" alt="Travis" />
 
                     <div class="testimonial parallax-2">
                         <blockquote class="testimonial__inner">
@@ -104,7 +115,7 @@
                             <cite class="testimonial__bottom">
                                 <div>
                                     <div class="testimonial__name">Elnatan Rudolph</div>
-                                    <div class="testimonial__position">Business Leader & Political Advisor</div>
+                                    <div class="testimonial__position">Líder Empresarial y Asesor Político</div>
                                 </div>
 
                                 <div class="testimonial__bottom-stars">
@@ -120,14 +131,16 @@
                 </div>
 
                 <div class="hero__right">
-                    <h1 class="hero__heading fade-in">Aggressive Injury Lawyer</h1>
+                    <h1 class="hero__heading hero__heading_sp fade-in">Abogado
+                        Implacabale en Lesiones Personales</h1>
 
                     <h3 class="hero__text fade-in">
                         Solo cobramos de lo que ganamos para ti.
                         <br />Si no ganamos dinero, no nos pagas nada.
                     </h3>
 
-                    <a href="#myForm"><button class="main-button main-button_hero">Haz Clic Para un Análisis Gratuito de
+                    <a href="#myForm"><button class="main-button main-button_hero" tabindex="1">Haz Clic Para un
+                            Análisis Gratuito de
                             tu Caso</button></a>
                 </div>
             </section>
@@ -137,18 +150,24 @@
             <section class="partners wrapper">
                 <h3 class="partners__text">As seen on</h3>
                 <div class="partners__icons">
-                    <img src="./img/microsoft.svg" alt="Ritter Injury Law partner">
-                    <img src="./img/atlassian.svg" alt="Ritter Injury Law partner">
-                    <img src="./img/notion.svg" alt="Ritter Injury Law partner">
-                    <img src="./img/whatsapp.svg" alt="Ritter Injury Law partner">
-                    <img src="./img/dropbox.svg" alt="Ritter Injury Law partner">
+                    <img src="./img/microsoft.svg" alt="Ritter Injury Law partner" loading="lazy">
+                    <img src="./img/atlassian.svg" alt="Ritter Injury Law partner loading=" lazy"">
+                    <img src="./img/notion.svg" alt="Ritter Injury Law partner" loading="lazy">
+                    <img src="./img/whatsapp.svg" alt="Ritter Injury Law partner" loading="lazy">
+                    <img src="./img/dropbox.svg" alt="Ritter Injury Law partner" loading="lazy">
 
-                    <img class="partners__img-mobile" src="./img/microsoft.svg" alt="Ritter Injury Law partner">
-                    <img class="partners__img-mobile" src="./img/atlassian.svg" alt="Ritter Injury Law partner">
-                    <img class="partners__img-mobile" src="./img/notion.svg" alt="Ritter Injury Law partner">
-                    <img class="partners__img-mobile" src="./img/whatsapp.svg" alt="Ritter Injury Law partner">
-                    <img class="partners__img-mobile" src="./img/dropbox.svg" alt="Ritter Injury Law partner">
-                    <img class="partners__img-mobile" src="./img/microsoft.svg" alt="Ritter Injury Law partner">
+                    <img class="partners__img-mobile" src="./img/microsoft.svg" alt="Ritter Injury Law partner"
+                        loading="lazy">
+                    <img class="partners__img-mobile" src="./img/atlassian.svg" alt="Ritter Injury Law partner"
+                        loading="lazy">
+                    <img class="partners__img-mobile" src="./img/notion.svg" alt="Ritter Injury Law partner"
+                        loading="lazy">
+                    <img class="partners__img-mobile" src="./img/whatsapp.svg" alt="Ritter Injury Law partner"
+                        loading="lazy">
+                    <img class="partners__img-mobile" src="./img/dropbox.svg" alt="Ritter Injury Law partner"
+                        loading="lazy">
+                    <img class="partners__img-mobile" src="./img/microsoft.svg" alt="Ritter Injury Law partner"
+                        loading="lazy">
                 </div>
             </section>
         </div>
@@ -175,12 +194,12 @@
                 Descubre cuánto vale el reclamo por tu lesión.
             </p>
 
-            <a href="#myForm"> <button class="main-button main-button_default">
+            <a href="#myForm"> <button class="main-button main-button_default" tabindex="1">
                     Haz Clic Para un Análisis Gratuito de tu Caso
                 </button> </a>
 
             <div class="description-photo parallax">
-                <img src="./img/travis 2.webp" class="fade-in" alt="Travis">
+                <img src="./img/travis 2.webp" loading="lazy" class="fade-in" alt="Travis">
             </div>
         </section>
 
@@ -264,7 +283,8 @@
                         <!-- Slide 1 -->
                         <div class="swiper-slide reviews__card fade-in">
                             <div class="reviews__card-top">
-                                <img src="./img/review-photo.svg" alt="review-photo" />
+                                <img src="./img/review-photo.svg" width="64px" height="64px" loading="lazy"
+                                    alt="review-photo" />
                                 <div>
                                     <p class="reviews__card-top-name">Elnatan Rudolph</p>
                                     <cite class="reviews__card-top-position">Líder Empresarial y Asesor Político</cite>
@@ -280,7 +300,8 @@
                         <!-- Slide 2 -->
                         <div class="swiper-slide reviews__card fade-in">
                             <div class="reviews__card-top">
-                                <img src="./img/review-photo.svg" alt="review-photo" />
+                                <img src="./img/review-photo.svg" width="64px" height="64px" loading="lazy"
+                                    alt="review-photo" />
                                 <div>
                                     <p class="reviews__card-top-name">Elnatan Rudolph</p>
                                     <cite class="reviews__card-top-position">Long-Time South Florida Political
@@ -297,7 +318,8 @@
                         <!-- Slide 3 -->
                         <div class="swiper-slide reviews__card fade-in">
                             <div class="reviews__card-top">
-                                <img src="./img/review-photo.svg" alt="review-photo" />
+                                <img src="./img/review-photo.svg" width="64px" height="64px" loading="lazy"
+                                    alt="review-photo" />
                                 <div>
                                     <p class="reviews__card-top-name">Elnatan Rudolph</p>
                                     <cite class="reviews__card-top-position">Long-Time South Florida Political
@@ -313,7 +335,8 @@
 
                         <div class="swiper-slide reviews__card">
                             <div class="reviews__card-top">
-                                <img src="./img/review-photo.svg" alt="review-photo" />
+                                <img src="./img/review-photo.svg" width="64px" height="64px" loading="lazy"
+                                    alt="review-photo" />
                                 <div>
                                     <p class="reviews__card-top-name">Elnatan Rudolph</p>
                                     <cite class="reviews__card-top-position">Long-Time South Florida Political
@@ -329,7 +352,8 @@
 
                         <div class="swiper-slide reviews__card">
                             <div class="reviews__card-top">
-                                <img src="./img/review-photo.svg" alt="review-photo" />
+                                <img src="./img/review-photo.svg" width="64px" height="64px" loading="lazy"
+                                    alt="review-photo" />
                                 <div>
                                     <p class="reviews__card-top-name">Elnatan Rudolph</p>
                                     <cite class="reviews__card-top-position">Long-Time South Florida Political
@@ -364,7 +388,7 @@
 
         <div class="about-wrapper wrapper_bg-black">
             <section class="about">
-                <img src="./img/travis 3.webp" class="fade-in" alt="Travis 3">
+                <img src="./img/travis 3.webp" loading="lazy" class="fade-in" alt="Travis 3">
 
                 <div>
                     <h2 class="about__heading">Acerca de Travis</h2>
@@ -383,7 +407,7 @@
 
                     <h4 class="about__text_bold">Llama ahora para una evaluación de caso rápida y gratuita.</h4>
 
-                    <a href="#myForm"><button class="main-button main-button_default">
+                    <a href="#myForm"><button class="main-button main-button_default" tabindex="1">
                             Haz Clic Para un Análisis Gratuito de tu Caso
                         </button> </a>
                 </div>
@@ -397,7 +421,7 @@
 
                 <div class="portfolio__cards">
                     <div class="portfolio__card fade-in">
-                        <img src="./img/portfolio-img-1.webp" class="portfolio__card-img"
+                        <img src="./img/portfolio-img-1.webp" loading="lazy" class="portfolio__card-img"
                             alt="Ritter Injury Law Portfolio Image">
 
                         <h4 class="portfolio__card-name">Lesiones en el Trabajo</h4>
@@ -409,7 +433,7 @@
                     </div>
 
                     <div class="portfolio__card fade-in">
-                        <img src="./img/portfolio-img-2.webp" class="portfolio__card-img"
+                        <img src="./img/portfolio-img-2.webp" loading="lazy" class="portfolio__card-img"
                             alt="Ritter Injury Law Portfolio Image">
 
                         <h4 class="portfolio__card-name">Accidentes Automovilísticos</h4>
@@ -420,7 +444,7 @@
                     </div>
 
                     <div class="portfolio__card fade-in">
-                        <img src="./img/portfolio-img-3.webp" class="portfolio__card-img"
+                        <img src="./img/portfolio-img-3.webp" loading="lazy" class="portfolio__card-img"
                             alt="Ritter Injury Law Portfolio Image">
 
                         <h4 class="portfolio__card-name">Lesiones Personales</h4>
@@ -431,11 +455,11 @@
                     </div>
                 </div>
 
-                <div class="portfolio-mobile swiper-container portfolio-swiper reviews__cards">
+                <div class="portfolio-mobile swiper-container portfolio-swiper reviews__cards" aria-hidden="true">
                     <div class="swiper-wrapper">
                         <!-- Slide 1 -->
                         <div class="swiper-slide portfolio__card fade-in">
-                            <img src="./img/portfolio-img-1.webp" class="portfolio__card-img"
+                            <img src="./img/portfolio-img-1.webp" loading="lazy" class="portfolio__card-img"
                                 alt="Ritter Injury Law Portfolio Image">
 
                             <h4 class="portfolio__card-name">Lesiones en el Trabajo</h4>
@@ -448,7 +472,7 @@
 
                         <!-- Slide 2 -->
                         <div class="swiper-slide portfolio__card">
-                            <img src="./img/portfolio-img-2.webp" class="portfolio__card-img"
+                            <img src="./img/portfolio-img-2.webp" loading="lazy" class="portfolio__card-img"
                                 alt="Ritter Injury Law Portfolio Image">
 
                             <h4 class="portfolio__card-name">Accidentes Automovilísticos</h4>
@@ -460,7 +484,7 @@
 
                         <!-- Slide 3 -->
                         <div class="swiper-slide portfolio__card">
-                            <img src="./img/portfolio-img-3.webp" class="portfolio__card-img"
+                            <img src="./img/portfolio-img-3.webp" loading="lazy" class="portfolio__card-img"
                                 alt="Ritter Injury Law Portfolio Image">
 
                             <h4 class="portfolio__card-name">Lesiones Personales</h4>
@@ -492,7 +516,7 @@
                 <h1 class="last__heading">¿Listo para saber cuánto vale tu lesión?</h1>
 
                 <a href="#myForm" style="max-width: 360px; width: 100%;"><button
-                        class="main-button main-button_default fade-in">
+                        class="main-button main-button_default fade-in" tabindex="1">
                         Llama Ahora
                     </button></a>
             </section>
@@ -507,18 +531,21 @@
                         <h4 class="contacts__info">Información de Contacto</h4>
 
                         <div class="contacts__item">
-                            <img src="./img/contacts-phone.svg" alt="contacts-icon">
-                            <span>(786) 850-8985</span>
+                            <img src="./img/contacts-phone.svg" width="32" height="32" loading="lazy"
+                                alt="contacts-icon">
+                            <a href="tel:786-850-8985">(786) 850-8985</a>
                         </div>
 
                         <div class="contacts__item">
-                            <img src="./img/contacts-mail.svg" alt="contacts-icon">
-                            <span>travis@ritterinjurylaw.com</span>
+                            <img src="./img/contacts-mail.svg" width="32" height="32" loading="lazy"
+                                alt="contacts-icon">
+                            <a href="mailto:travis@ritterinjurylaw.com">travis@ritterinjurylaw.com</a>
                         </div>
 
                         <div class="contacts__item">
-                            <img src="./img/contacts-map.svg" alt="contacts-icon">
-                            <span>9100 S Dadeland Blvd, Suite 1500, Miami, FL 33156</span>
+                            <img src="./img/contacts-map.svg" width="32" height="32" loading="lazy" alt="contacts-icon">
+                            <a href="https://maps.app.goo.gl/c3phFpDUByazQLYb8">9100 S Dadeland Blvd, Suite 1500, Miami,
+                                FL 33156</a>
                         </div>
                     </div>
                 </div>
@@ -538,7 +565,7 @@
                         <div class="form-group">
                             <textarea name="message" rows="3" placeholder="Platícanos qué sucedió." required></textarea>
                         </div>
-                        <button type="submit" class="main-button main-button_hero">Enviar</button>
+                        <button type="submit" class="main-button main-button_hero" tabindex="0">Enviar</button>
                     </form>
                 </div>
 
@@ -546,18 +573,19 @@
                     <h4 class="contacts__info">Información de Contacto</h4>
 
                     <div class="contacts__item">
-                        <img src="./img/contacts-phone.svg" alt="contacts-icon">
-                        <span>(786) 850-8985</span>
+                        <img src="./img/contacts-phone.svg" width="32" height="32" loading="lazy" alt="contacts-icon">
+                        <a href="tel:786-850-8985">(786) 850-8985</a>
                     </div>
 
                     <div class="contacts__item">
-                        <img src="./img/contacts-mail.svg" alt="contacts-icon">
-                        <span>travis@ritterinjurylaw.com</span>
+                        <img src="./img/contacts-mail.svg" width="32" height="32" loading="lazy" alt="contacts-icon">
+                        <a href="mailto:travis@ritterinjurylaw.com">travis@ritterinjurylaw.com</a>
                     </div>
 
                     <div class="contacts__item">
-                        <img src="./img/contacts-map.svg" alt="contacts-icon">
-                        <span>9100 S Dadeland Blvd, Suite 1500, Miami, FL 33156</span>
+                        <img src="./img/contacts-map.svg" width="32" height="32" loading="lazy" alt="contacts-icon">
+                        <a href="https://maps.app.goo.gl/c3phFpDUByazQLYb8">9100 S Dadeland Blvd, Suite 1500, Miami, FL
+                            33156</a>
                     </div>
                 </div>
             </section>
@@ -565,7 +593,8 @@
 
         <div class="footer-wrapper wrapper_bg-grey">
             <section class="footer wrapper">
-                <a href="./"> <img loading="lazy" src="./img/logo.svg" alt="Ritter Injury Law logo" /> </a>
+                <a href="./"> <img loading="lazy" width="179" height="54" src="./img/logo.svg"
+                        alt="Ritter Injury Law logo" /> </a>
 
                 <div class="footer__links">
                     <a href="./">Terms of Service</a>

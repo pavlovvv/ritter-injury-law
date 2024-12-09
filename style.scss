@@ -352,6 +352,12 @@ body {
   font-size: 20px;
   font-weight: 700;
   line-height: 25.2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: $darkGold;
+  }
 
   @media (width < 1024px) {
     font-size: 14px;
@@ -410,6 +416,20 @@ body {
   @media (width <=1250px) {
     font-size: 7vw;
     line-height: 7vw;
+  }
+
+  @media (width < 1024px) {
+    font-size: 56px;
+    line-height: 56px;
+  }
+}
+
+.hero__heading_sp {
+  max-width: 620px;
+
+  @media (width < 1440px) {
+    font-size: 6vw;
+    line-height: 6vw;
   }
 
   @media (width < 1024px) {
@@ -740,6 +760,7 @@ body {
 .steps__heading {
   @extend %headings-text;
   text-align: center;
+  margin: 0 auto;
 
   @media (width < 1024px) {
     text-align: left;
@@ -1382,11 +1403,17 @@ body {
     height: auto;
   }
 
-  span {
+  a {
     font-size: 18px;
     font-weight: 400;
     line-height: 27px;
     max-width: 249px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      color: $gold;
+    }
   }
 }
 

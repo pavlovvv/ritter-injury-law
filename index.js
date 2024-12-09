@@ -1,6 +1,80 @@
 document.addEventListener("DOMContentLoaded", function () {
+  //swiper inizialization
+  let swiperLoaded = false;
 
-    // drawer
+  function loadSwiper() {
+    if (!swiperLoaded) {
+      const script = document.createElement("script");
+      script.src =
+        "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js";
+      script.onload = () => {
+        new Swiper(".reviews-swiper", {
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          slidesPerView: 1.08,
+          spaceBetween: 16,
+          keyboard: {
+            enabled: true,
+            onlyInViewport: false,
+          },
+
+          breakpoints: {
+            1240: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 16,
+            },
+          },
+        });
+
+        new Swiper(".portfolio-swiper", {
+          navigation: {
+            nextEl: ".swiper-button-next-1",
+            prevEl: ".swiper-button-prev-1",
+          },
+          pagination: {
+            el: ".swiper-pagination-1",
+            clickable: true,
+          },
+          slidesPerView: 1.08,
+          spaceBetween: 16,
+          keyboard: {
+            enabled: true,
+            onlyInViewport: false,
+          },
+
+          breakpoints: {
+            1240: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 16,
+            },
+          },
+        });
+      };
+      document.body.appendChild(script);
+      swiperLoaded = true;
+    }
+  }
+
+  // Загрузка Swiper при скролле
+  window.addEventListener("scroll", loadSwiper, { once: true });
+
+  // drawer
   const burgerIcon = document.querySelector(".burger__icon");
   const burgerMenu = document.querySelector(".burger__menu");
 
@@ -24,66 +98,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
-
-  //swipers
-  const swiper1 = new Swiper(".reviews-swiper", {
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    slidesPerView: 1.08,
-    spaceBetween: 16,
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
-
-    breakpoints: {
-      1240: {
-        slidesPerView: 3,
-        spaceBetween: 40,
-      },
-
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 16,
-      },
-    },
-  });
-
-  const swiper2 = new Swiper(".portfolio-swiper", {
-    navigation: {
-      nextEl: ".swiper-button-next-1",
-      prevEl: ".swiper-button-prev-1",
-    },
-    pagination: {
-      el: ".swiper-pagination-1",
-      clickable: true,
-    },
-    slidesPerView: 1.08,
-    spaceBetween: 16,
-    keyboard: {
-      enabled: true,
-      onlyInViewport: false,
-    },
-
-    breakpoints: {
-      1240: {
-        slidesPerView: 3,
-        spaceBetween: 40,
-      },
-
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 16,
-      },
-    },
-  });
-
 
   //form-validation
   const form = document.getElementById("myForm");
@@ -150,12 +164,10 @@ document.addEventListener("DOMContentLoaded", function () {
     return re.test(email);
   }
 
-
   //currentYear
   const yearElement = document.getElementById("currentYear");
   const currentYear = new Date().getFullYear();
   yearElement.textContent = currentYear;
-
 
   //animations
   const fadeInElements = document.querySelectorAll(".fade-in");
@@ -196,11 +208,10 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", apply2Parallax);
 });
 
-
 //scroll events
 window.addEventListener("scroll", function () {
   var header = document.querySelector(".header-wrapper");
-  if (window.scrollY > 50) {
+  if (window.scrollY > 150) {
     header.classList.add("scrolled");
   } else {
     header.classList.remove("scrolled");
