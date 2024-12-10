@@ -23,7 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
             enabled: true,
             onlyInViewport: false,
           },
-
+          autoplay: {
+            delay: 2000,
+          },
           breakpoints: {
             1240: {
               slidesPerView: 3,
@@ -52,7 +54,9 @@ document.addEventListener("DOMContentLoaded", function () {
             enabled: true,
             onlyInViewport: false,
           },
-
+          autoplay: {
+            delay: 2000,
+          },
           breakpoints: {
             1240: {
               slidesPerView: 3,
@@ -112,10 +116,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     clearErrors();
 
-    let isValid = true;
-    const errors = []; // Массив для сбора ошибок
+    const errors = [];
 
-    // Проверка имени
     if (nameInput.value.trim() === "") {
       showInputError(nameInput);
       errors.push("Please fill the name field");
@@ -126,23 +128,20 @@ document.addEventListener("DOMContentLoaded", function () {
       isValid = false;
     }
 
-    // Проверка телефона
     if (phoneInput.value.trim() === "") {
       showInputError(phoneInput);
-      errors.push("Please fill the phone field");
+      errors.push("Please fill the phone field.");
       isValid = false;
     }
 
-    // Проверка email
     if (!validateEmail(emailInput.value.trim())) {
       showInputError(emailInput);
       errors.push("Please enter a valid email address.");
       isValid = false;
     }
 
-    // Генерация сообщений на основе комбинаций ошибок
     if (errors.length > 0) {
-      const uniqueErrors = [...new Set(errors)]; // Убираем дубли
+      const uniqueErrors = [...new Set(errors)];
       if (errors.length === 3) {
         generalErrorsContainer.textContent =
           "Please fill in name, phone and email fields";
@@ -156,21 +155,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Функция для очистки ошибок
   function clearErrors() {
     const generalErrorsContainer = document.getElementById("generalErrors");
-    generalErrorsContainer.textContent = ""; // Очищаем общий блок ошибок
+    generalErrorsContainer.textContent = "";
 
     const inputs = form.querySelectorAll(".error");
     inputs.forEach((input) => input.classList.remove("error"));
   }
 
-  // Добавление класса ошибки для полей
   function showInputError(input) {
-    input.classList.add("error"); // Красная рамка для поля
+    input.classList.add("error");
   }
-
-  // Проверка email с помощью регулярного выражения
   function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
