@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
             onlyInViewport: false,
           },
           autoplay: {
-            delay: 2000,
+            delay: 5000,
           },
           breakpoints: {
             1240: {
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
             onlyInViewport: false,
           },
           autoplay: {
-            delay: 2000,
+            delay: 5000,
           },
           breakpoints: {
             1240: {

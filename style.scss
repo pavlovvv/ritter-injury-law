@@ -429,9 +429,13 @@ body {
   @media (width < 1024px) {
     padding: 0 0 40px 0;
   }
+}
 
-  @media (width < 600px) {
-        padding: 0 0 73.6px 0;
+.hero__right_sp {
+  padding-top: 95px;
+
+  @media (width < 1024px) {
+    padding: 0 0 40px 0;
   }
 }
 
@@ -460,6 +464,8 @@ body {
 
 .hero__heading_sp {
   max-width: 620px;
+  font-size: 80px;
+  line-height: 80px;
 
   @media (width < 1440px) {
     font-size: 6vw;
@@ -567,6 +573,7 @@ body {
   color: #fff;
   border-radius: 12px;
   min-width: 400px;
+  text-align: left;
 
   @media (width < 1024px) {
     bottom: -45px;
@@ -748,8 +755,8 @@ body {
   position: relative;
 
   @media (width < 1024px) {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 40px;
+    padding-bottom: 40  px;
   }
 }
 
@@ -1221,7 +1228,7 @@ body {
   padding: 47px 94px 0 74px;
 
   @media (width < 1024px) {
-    padding: 33px 24px 40px 24px;
+    padding: 40px 24px;
   }
 }
 
@@ -1443,7 +1450,7 @@ body {
 
   @media (width < 950px) {
     display: block;
-    padding: 63px 24px 0 24px;
+    padding: 64px 24px 0 24px;
   }
 }
 
