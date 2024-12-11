@@ -457,8 +457,9 @@ body {
 }
 @media (width < 600px) {
   .hero__heading {
-    font-size: 48px;
-    line-height: 48px;
+    font-size: 10.8vw;
+    line-height: 10.8vw;
+    max-width: 80vw;
   }
 }
 
