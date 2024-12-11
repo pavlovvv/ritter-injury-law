@@ -87,6 +87,13 @@ body {
   font-size: 16px;
   line-height: 20.16px;
 }
+.header__nav-items li {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.header__nav-items li:hover {
+  color: rgb(209, 171, 112);
+}
 
 .header__button {
   text-transform: uppercase;
@@ -361,14 +368,14 @@ body {
 }
 @media (width <= 1050px) {
   .hero-wrapper {
-    padding-left: 11px;
-    padding-right: 8px;
-  }
-}
-@media (width <= 1050px) {
-  .hero-wrapper {
     padding-left: 24px;
     padding-right: 24px;
+  }
+}
+
+@media (width > 1050px) {
+  .hero-wrapper_sp {
+    padding-right: 80px;
   }
 }
 
@@ -384,9 +391,9 @@ body {
     row-gap: 89.52px;
   }
 }
-@media (width < 600px) {
+@media (width < 420px) {
   .hero {
-    row-gap: 0;
+    row-gap: 114.59px;
   }
 }
 
@@ -407,7 +414,7 @@ body {
     mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
-    width: 75%;
+    width: 71.5%;
   }
 }
 
@@ -416,7 +423,7 @@ body {
 }
 @media (width < 1024px) {
   .hero__right {
-    padding: 0 0 40px 0;
+    padding: 0 0 32PX 0;
   }
 }
 
@@ -480,27 +487,6 @@ body {
   }
 }
 
-.hero__img_pc {
-  display: block;
-}
-@media (width < 600px) {
-  .hero__img_pc {
-    display: none;
-  }
-}
-
-.hero__img_mobile {
-  display: none;
-}
-@media (width < 600px) {
-  .hero__img_mobile {
-    display: block;
-    margin: 0 auto;
-    width: 67% !important;
-    margin-top: 9px;
-  }
-}
-
 .hero__text {
   font-size: 20px;
   font-weight: 500;
@@ -555,7 +541,7 @@ body {
   width: 100%;
 }
 
-.about__text, .reviews__card-text, .benefits__middle-text, .description__text, .testimonial {
+.about__text, .reviews__card-text, .description__text, .testimonial {
   font-size: 18px;
   font-weight: 400;
   line-height: 27px;
@@ -581,40 +567,27 @@ body {
     min-width: 200px;
   }
 }
-@media (width <= 430px) {
+@media (width < 600px) {
   .testimonial {
-    left: 9px;
-    bottom: unset;
-    padding: 16px;
-    top: 325px;
-    max-width: 400px;
+    left: -4px;
+    top: unset;
+    width: 102.5%;
+    bottom: -75px;
+    padding: 12px;
   }
   .testimonial > blockquote > div {
     font-size: 14px;
     line-height: 21px;
   }
 }
-@media (width < 360px) {
+@media (width <= 430px) {
   .testimonial {
-    top: 250px;
+    max-width: 400px;
   }
 }
-@media (width < 600px) {
+@media (width < 420px) {
   .testimonial {
-    display: none;
-  }
-}
-
-.testimonial_mobile {
-  display: none;
-}
-@media (width < 600px) {
-  .testimonial_mobile {
-    position: initial;
-    display: block;
-    text-align: left;
-    margin-top: 45.68px;
-    width: 100%;
+    bottom: -98.59px;
   }
 }
 
@@ -647,6 +620,12 @@ body {
   padding-top: 8px;
   opacity: 0.7;
   font-style: normal;
+}
+@media (width < 600px) {
+  .testimonial__position {
+    font-size: 12px;
+    line-height: 13.2px;
+  }
 }
 
 .testimonial__bottom-stars {
@@ -759,8 +738,8 @@ body {
 }
 @media (width < 1024px) {
   .description {
-    padding-top: 40px;
-    padding-bottom: 40 px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 
@@ -810,7 +789,7 @@ body {
 
 .description-photo {
   position: absolute;
-  right: 0;
+  right: 128px;
   bottom: 0;
   background: linear-gradient(356.2deg, #0C121E 0%, rgba(12, 18, 30, 0.933333) 134.51%);
   width: 552px;
@@ -823,7 +802,12 @@ body {
   bottom: 0;
   left: 21px;
 }
-@media (width <= 1200px) {
+@media (width <= 1350px) {
+  .description-photo {
+    right: 80px;
+  }
+}
+@media (width <= 1270px) {
   .description-photo {
     display: none;
   }
@@ -837,6 +821,13 @@ body {
   .portfolio, .reviews, .benefits, .steps {
     padding-top: 64px;
     padding-bottom: 64px;
+  }
+}
+
+@media (width < 1024px) {
+  .steps {
+    padding-top: 32px;
+    padding-bottom: 62px;
   }
 }
 
@@ -976,6 +967,8 @@ body {
 }
 
 .benefits__middle-text {
+  font-size: 20px;
+  line-height: 30px;
   color: #fff;
   opacity: 0.8;
   max-width: 335px;
@@ -1228,7 +1221,7 @@ body {
 }
 @media (width < 1024px) {
   .about-wrapper {
-    padding: 40px 24px;
+    padding: 33px 24px 0 24px;
   }
 }
 
@@ -1242,6 +1235,11 @@ body {
 }
 .about > div {
   padding-bottom: 83px;
+}
+@media (width < 1024px) {
+  .about > div {
+    padding-bottom: 40px;
+  }
 }
 @media (width < 1150px) {
   .about {
