@@ -542,6 +542,11 @@ body {
   width: 100%;
 }
 
+.main-button_sp {
+  max-width: 447px;
+  width: 100%;
+}
+
 .about__text, .reviews__card-text, .description__text, .testimonial {
   font-size: 18px;
   font-weight: 400;
@@ -1303,6 +1308,10 @@ body {
   }
 }
 
+.portfolio__heading_sp {
+  max-width: 760px;
+}
+
 .portfolio__cards {
   flex-wrap: wrap;
   row-gap: 32px;
@@ -1504,6 +1513,8 @@ body {
   padding: 32px;
   width: 100%;
   max-width: 550px;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .form-container button {
   width: 100%;

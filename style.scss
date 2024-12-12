@@ -547,6 +547,11 @@ body {
   width: 100%;
 }
 
+.main-button_sp {
+  max-width: 447px;
+  width: 100%;
+}
+
 %main-text {
   font-size: 18px;
   font-weight: 400;
@@ -1313,6 +1318,10 @@ body {
   }
 }
 
+.portfolio__heading_sp {
+  max-width: 760px
+}
+
 .portfolio__cards {
   @extend .reviews__cards;
   flex-wrap: wrap;
@@ -1510,6 +1519,7 @@ body {
   padding: 32px;
   width: 100%;
   max-width: 550px;
+  height: fit-content;
 
   button {
     width: 100%;
