@@ -51,10 +51,6 @@ p {
   line-height: inherit;
 }
 
-p + p {
-  margin-top: 1em;
-}
-
 ul {
   list-style: none;
 }

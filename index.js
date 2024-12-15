@@ -212,7 +212,25 @@ document.addEventListener("DOMContentLoaded", function () {
     parallaxElement2.style.transform = `translateY(-${offset}px)`;
   }
 
-  window.addEventListener("scroll", apply2Parallax);
+  if (parallaxElement2) window.addEventListener("scroll", apply2Parallax);
+
+  //accordions
+
+  const accordions = document.querySelectorAll('.accordion');
+
+  accordions.forEach(accordion => {
+    const header = accordion.querySelector('.accordion-header');
+    header.addEventListener('click', () => {
+        accordion.classList.toggle('open');
+
+        const content = accordion.querySelector('.accordion-content');
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + 24 + "px";
+        } 
+    });
+});
 });
 
 //scroll events
