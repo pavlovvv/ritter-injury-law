@@ -363,6 +363,7 @@ body {
   line-height: 25.2px;
   cursor: pointer;
   transition: all 0.3s ease;
+  display: block;
 
   &:hover {
     background: $darkGold;
@@ -1537,6 +1538,14 @@ body {
   margin-bottom: 20px;
 }
 
+.form__inner {
+  padding: 32px;
+
+  @media (width < 950px) {
+    padding: 24px 16px;
+  }
+}
+
 input,
 textarea {
   width: 100%;
@@ -1574,11 +1583,7 @@ textarea {
 
 .error-message {
   color: rgba(255, 84, 87, 1);
-  font-size: 12px;
-  line-height: 16.8px;
-  margin-top: 4px;
-  margin-left: 16px;
-  position: absolute;
+  font-size: 1em;
 }
 
 .footer-wrapper {

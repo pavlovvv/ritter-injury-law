@@ -360,7 +360,8 @@
                         often challenge workers’ compensation claims.
                         The doctor you see may push you to go back to work before you’re healed. You could even face
                         illegal retaliation once you return to the workplace.</p>
-                    <h3 class="compensation__heading compensation__heading_vanish">Ritter Injury Law will fight for you and help you with every step
+                    <h3 class="compensation__heading compensation__heading_vanish">Ritter Injury Law will fight for you
+                        and help you with every step
                         to collect what you’re owed. </h3>
                 </div>
 
@@ -491,18 +492,18 @@
                                 to workers who have suffered permanent partial disability due to their injury. These
                                 benefits are paid for a specified time period.</p>
 
-                                <p class="accordion-content__list-el">Temporary Total Disability Benefits: These benefits
-                                    are paid to workers who are temporarily unable to work due to their injury. The amount
-                                    of these benefits is typically calculated as two-thirds of the worker’s average weekly
-                                    wage.</p>
-    
-                                <p class="accordion-content__list-el">Permanent Total Disability Benefits: These benefits
-                                    are paid to workers who have suffered permanent disability due to their injury. These
-                                    benefits are paid for the rest of the worker’s life.</p>
-    
-                                <p class="accordion-content__list-el">Permanent Partial Disability Benefits: They are paid
-                                    to workers who have suffered permanent partial disability due to their injury. These
-                                    benefits are paid for a specified time period.</p>
+                            <p class="accordion-content__list-el">Temporary Total Disability Benefits: These benefits
+                                are paid to workers who are temporarily unable to work due to their injury. The amount
+                                of these benefits is typically calculated as two-thirds of the worker’s average weekly
+                                wage.</p>
+
+                            <p class="accordion-content__list-el">Permanent Total Disability Benefits: These benefits
+                                are paid to workers who have suffered permanent disability due to their injury. These
+                                benefits are paid for the rest of the worker’s life.</p>
+
+                            <p class="accordion-content__list-el">Permanent Partial Disability Benefits: They are paid
+                                to workers who have suffered permanent partial disability due to their injury. These
+                                benefits are paid for a specified time period.</p>
                         </div>
                     </div>
 
@@ -528,7 +529,7 @@
                             <p class="accordion-content__list-el">Permanent Partial Disability Benefits: They are paid
                                 to workers who have suffered permanent partial disability due to their injury. These
                                 benefits are paid for a specified time period.</p>
-                                
+
 
                         </div>
                     </div>
@@ -555,7 +556,7 @@
                             <p class="accordion-content__list-el">Permanent Partial Disability Benefits: They are paid
                                 to workers who have suffered permanent partial disability due to their injury. These
                                 benefits are paid for a specified time period.</p>
-                                
+
 
                         </div>
                     </div>
@@ -582,7 +583,7 @@
                             <p class="accordion-content__list-el">Permanent Partial Disability Benefits: They are paid
                                 to workers who have suffered permanent partial disability due to their injury. These
                                 benefits are paid for a specified time period.</p>
-                                
+
 
                         </div>
                     </div>
@@ -609,7 +610,7 @@
                             <p class="accordion-content__list-el">Permanent Partial Disability Benefits: They are paid
                                 to workers who have suffered permanent partial disability due to their injury. These
                                 benefits are paid for a specified time period.</p>
-                                
+
 
                         </div>
                     </div>
@@ -636,7 +637,7 @@
                             <p class="accordion-content__list-el">Permanent Partial Disability Benefits: They are paid
                                 to workers who have suffered permanent partial disability due to their injury. These
                                 benefits are paid for a specified time period.</p>
-                                
+
 
                         </div>
                     </div>
@@ -686,20 +687,24 @@
 
                 <div class="form-container fade-in">
                     <form id="myForm" novalidate>
-                        <div class="form-group">
-                            <input type="text" id="name" name="full_name" placeholder="Full Name" required>
+                        <div class="form__inner">
+                            <div class="form-group">
+                                <input type="text" id="name" name="full_name" placeholder="Full Name" required>
+                                <div class="error-message" id="nameError"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" name="phone_number" placeholder="Phone Number" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" rows="3" placeholder="Tell us what happened."
+                                    required></textarea>
+                                <div class="error-message" id="messageError"></div>
+                            </div>
+                            <button type="submit" class="main-button main-button_hero" tabindex="0">Submit</button>
                         </div>
-                        <div class="form-group">
-                            <input type="tel" name="phone_number" placeholder="Phone Number" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" rows="3" placeholder="Tell us what happened." required></textarea>
-                            <div class="error-message" id="generalErrors"></div>
-                        </div>
-                        <button type="submit" class="main-button main-button_hero" tabindex="0">Submit</button>
                     </form>
                 </div>
 

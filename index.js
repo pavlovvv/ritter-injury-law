@@ -112,60 +112,64 @@ document.addEventListener("DOMContentLoaded", function () {
     const nameInput = document.getElementById("name");
     const phoneInput = form.querySelector('input[name="phone_number"]');
     const emailInput = document.getElementById("email");
-    const generalErrorsContainer = document.getElementById("generalErrors");
+    const messageInput = document.getElementById("message");
+
+    const nameError = document.getElementById("nameError");
+    const emailError = document.getElementById("emailError");
+    const messageError = document.getElementById("messageError");
 
     clearErrors();
 
-    const errors = [];
+    let isValid = true;
 
     if (nameInput.value.trim() === "") {
-      showInputError(nameInput);
-      errors.push("Please fill the name field");
+      showError(nameInput, nameError, "Full Name is required.");
       isValid = false;
     } else if (nameInput.value.trim().length < 2) {
-      showInputError(nameInput);
-      errors.push("Name must be at least 2 characters.");
+      showError(nameInput, nameError, "Name must be at least 2 characters.");
       isValid = false;
     }
 
     if (phoneInput.value.trim() === "") {
-      showInputError(phoneInput);
-      errors.push("Please fill the phone field.");
+      showError(phoneInput, null, "Phone is required");
       isValid = false;
     }
 
     if (!validateEmail(emailInput.value.trim())) {
-      showInputError(emailInput);
-      errors.push("Please enter a valid email address.");
+      showError(emailInput, emailError, "Please enter a valid email address.");
       isValid = false;
     }
 
-    if (errors.length > 0) {
-      const uniqueErrors = [...new Set(errors)];
-      if (errors.length === 3) {
-        generalErrorsContainer.textContent =
-          "Please fill in name, phone and email fields";
-      } else {
-        generalErrorsContainer.textContent = uniqueErrors.join(" ");
-      }
-    } else {
-      generalErrorsContainer.textContent = "";
+    if (messageInput.value.trim() === "") {
+      showError(messageInput, messageError, "Message is required");
+      isValid = false;
+    }
+
+    if (isValid) {
       alert("Form submitted successfully!");
       form.submit();
     }
   });
 
   function clearErrors() {
-    const generalErrorsContainer = document.getElementById("generalErrors");
-    generalErrorsContainer.textContent = "";
-
+    const errorMessages = document.querySelectorAll(".error-message");
+    errorMessages.forEach((error) => (error.textContent = ""));
     const inputs = form.querySelectorAll(".error");
     inputs.forEach((input) => input.classList.remove("error"));
   }
 
-  function showInputError(input) {
+  function showError(input, errorBlock, message) {
     input.classList.add("error");
+    if (errorBlock) {
+      errorBlock.textContent = message;
+    } else {
+      const error = document.createElement("div");
+      error.className = "error-message";
+      error.textContent = message;
+      input.parentNode.appendChild(error);
+    }
   }
+
   function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
@@ -216,21 +220,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //accordions
 
-  const accordions = document.querySelectorAll('.accordion');
+  const accordions = document.querySelectorAll(".accordion");
 
-  accordions.forEach(accordion => {
-    const header = accordion.querySelector('.accordion-header');
-    header.addEventListener('click', () => {
-        accordion.classList.toggle('open');
+  accordions.forEach((accordion) => {
+    const header = accordion.querySelector(".accordion-header");
+    header.addEventListener("click", () => {
+      accordion.classList.toggle("open");
 
-        const content = accordion.querySelector('.accordion-content');
-        if (content.style.maxHeight) {
-          content.style.maxHeight = null;
-        } else {
-          content.style.maxHeight = content.scrollHeight + 24 + "px";
-        } 
+      const content = accordion.querySelector(".accordion-content");
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + 24 + "px";
+      }
     });
-});
+  });
 });
 
 //scroll events

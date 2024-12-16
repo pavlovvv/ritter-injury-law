@@ -350,6 +350,7 @@ body {
   line-height: 25.2px;
   cursor: pointer;
   transition: all 0.3s ease;
+  display: block;
 }
 .phone:hover {
   background: rgb(186, 144, 78);
@@ -1532,6 +1533,15 @@ body {
   margin-bottom: 20px;
 }
 
+.form__inner {
+  padding: 32px;
+}
+@media (width < 950px) {
+  .form__inner {
+    padding: 24px 16px;
+  }
+}
+
 input,
 textarea {
   width: 100%;
@@ -1574,11 +1584,7 @@ textarea {
 
 .error-message {
   color: rgb(255, 84, 87);
-  font-size: 12px;
-  line-height: 16.8px;
-  margin-top: 4px;
-  margin-left: 16px;
-  position: absolute;
+  font-size: 1em;
 }
 
 .footer-wrapper {
