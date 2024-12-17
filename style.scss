@@ -91,6 +91,14 @@ body {
   }
 }
 
+.header__nav-items_sp {
+  @media (width < 1370px) {
+    column-gap: 20px;
+    font-size: 1.1vw;
+    letter-spacing: -0.04em;
+  }
+}
+
 .header__button {
   text-transform: uppercase;
   text-align: center;
@@ -978,9 +986,14 @@ body {
   margin-top: 8px;
 
   @media (width < 1024px) {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 16px !important;
+    line-height: 24px !important;
   }
+}
+
+.benefits__middle-text_add {
+  font-size: 22px;
+  font-weight: 600;
 }
 
 .benefits__bottom {
@@ -1410,6 +1423,11 @@ body {
   }
 }
 
+.last_add {
+  padding-top: 40px;
+  padding-bottom: 40px
+}
+
 .last__heading {
   @extend %headings-text;
   color: #fff;
@@ -1716,7 +1734,7 @@ textarea {
 
   @media (width < 1024px) {
     padding: 16px 0 32px;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
   }
 }
@@ -1817,7 +1835,7 @@ textarea {
 }
 
 .motivation__text-bold {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 600;
   line-height: 30px;
   padding-bottom: 28px;
@@ -1897,15 +1915,17 @@ line-height: 33.6px;
 
 .compensation__text {
   @extend %main-text;
-  padding: 32px 0;
+  padding: 32px 0 20px 0;
   opacity: 0.8;
   max-width: 617px;
+  font-size: 22px;
+  line-height: 30px;
 
   @media (width < 1024px) {
     padding-top: 24px;
     padding-bottom: 0;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 27px;
     opacity: 0.9;
       }
 }
@@ -1948,12 +1968,12 @@ line-height: 33.6px;
 }
 
 .steps-2-wrapper {
-  padding-top: 100px;
-  padding-bottom: 120px;
+  padding-top: 64px;
+  padding-bottom: 64px;
 
   @media (width < 1024px) {
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 
@@ -1986,10 +2006,10 @@ line-height: 33.6px;
   
   @media (width <= 768px) {
     height: fit-content;
-    & > .steps__card-text {
-      font-size: 14px;
-      line-height: 21px;
-    }
+    // & > .steps__card-text {
+    //   font-size: 14px;
+    //   line-height: 21px;
+    // }
   }
 }
 
@@ -2121,8 +2141,8 @@ line-height: 33.6px;
 
 
 .accordion-content__list-el {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 17px;
+  line-height: 25px;
   position: relative;
   padding-left: 14px;
 
