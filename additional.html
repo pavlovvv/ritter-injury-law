@@ -40,12 +40,21 @@
 
             <nav class="header__nav">
                 <ul class="header__nav-items">
-                    <li tabindex="0">Home</li>
-                    <li tabindex="0">practice areas</li>
-                    <li tabindex="0">Reviews</li>
-                    <li tabindex="0">Results</li>
-                    <li tabindex="0">Location</li>
-                    <li tabindex="0">Contact Us</li>
+                    <li tabindex="0"><a href="#">Home</a></li>
+                    <li tabindex="0"><a href="#">practice areas
+                            <img src="./img/golden-arrow.svg" alt="Arrow" class="header__nav-arrow">
+                            <div class="dropdown-menu">
+                                <ul class="dropdown-menu__inner">
+                                    <li><a href="#">Work injury</a></li>
+                                    <li><a href="#">Work injLoreasury</a></li>
+                                    <li><a href="#">Work injury</a></li>
+                                </ul>
+                        </a>
+                    </li>
+                    <li tabindex="0"><a href="#">Reviews</a></li>
+                    <li tabindex="0"><a href="#">Results</a></li>
+                    <li tabindex="0"><a href="#">Location</a></li>
+                    <li tabindex="0"><a href="#">Contact Us</a></li>
                 </ul>
             </nav>
 
@@ -64,7 +73,23 @@
                                 <a href="./#home" class="header__link" aria-hidden="true">Home</a>
                             </li>
                             <li class="header__item">
-                                <a href="#gallery" class="header__link" aria-hidden="true">Practice areas</a>
+                                <a href="#gallery" class="header__link">
+                                    <div class="header-accordion">
+                                        <div class="header-accordion__top">
+                                            <span>Practice areas</span>
+                                            <div class="accordion__arrow"><img src="./img/golden-arrow.svg"
+                                                    alt="accordion-arrow">
+                                            </div>
+                                        </div>
+                                        <div class="header-accordion__content">
+                                            <ul>
+                                                <li><a href="#">Work injury</a></li>
+                                                <li><a href="#">Work injLoreasury</a></li>
+                                                <li><a href="#">Work injury</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
                             </li>
                             <li class="header__item">
                                 <a href="#serv" class="header__link" aria-hidden="true">Reviews</a>
@@ -181,14 +206,15 @@
                 <div class="benefits__middle">
                     <h2 class="benefits__middle-heading">Florida workers’ compensation can be frustrating and hard to
                         navigate without a lawyer. </h2>
-                    <h3 class="benefits__middle-text benefits__middle-text_add">Ritter Injury law helps you with every step to recover the most
+                    <h3 class="benefits__middle-text benefits__middle-text_add">Ritter Injury law helps you with every
+                        step to recover the most
                         for
                         your injury – we’re fast, effective, and free unless you win. </h3>
                 </div>
 
                 <div class="benefits__bottom">
                     <div class="fade-in">
-                        <h4 class="benefits__bottom-heading">5x more money</h4>
+                        <h4 class="benefits__bottom-heading">3x more money</h4>
                         <p class="benefits__bottom-text benefits__bottom-text_wide">for your injury, if you hire a
                             lawyer
                             <br />
@@ -347,7 +373,7 @@
                 </div>
 
                 <div class="hero-2__right">
-                    <img class="hero-2-photo" src="./img/hero-2_cropped.webp" alt="Hero photo">
+                    <img class="hero-2-photo_bottom" src="./img/hero-2_cropped.webp" alt="Hero photo">
                 </div>
             </section>
         </div>
@@ -396,7 +422,8 @@
                         <img src="./img/card-icon-1.svg" class="steps__card-icon" alt="Ritter Injury Law card icon">
 
                         <h4 class="steps__card-heading">Money for your injury</h4>
-                        <p class="steps__card-text">Your injury wage award is typically calculated by taking your total earnings over a specific period, such as the previous 13 weeks, and</p>
+                        <p class="steps__card-text">Your injury wage award is typically calculated by taking your total
+                            earnings over a specific period, such as the previous 13 weeks, and</p>
                         <p class="steps-2__card-read-more"><a href="#myForm">Read More</a></p>
                     </div>
 
@@ -404,7 +431,8 @@
                         <img src="./img/card-icon-1.svg" class="steps__card-icon" alt="Ritter Injury Law card icon">
 
                         <h4 class="steps__card-heading">Money for your injury</h4>
-                        <p class="steps__card-text">Florida law ensures your employer pays for your medical expenses and treatment to get better for your treatment, including doctor bills..</p>
+                        <p class="steps__card-text">Florida law ensures your employer pays for your medical expenses and
+                            treatment to get better for your treatment, including doctor bills..</p>
                         <p class="steps-2__card-read-more"><a href="#myForm">Read More</a></p>
                     </div>
                 </div>

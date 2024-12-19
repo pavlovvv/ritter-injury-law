@@ -41,12 +41,21 @@
 
             <nav class="header__nav">
                 <ul class="header__nav-items header__nav-items_sp">
-                    <li tabindex="0">INICIO</li>
-                    <li tabindex="0">ÁREAS DE ESPECIALIDAD</li>
-                    <li tabindex="0">OPINIONES</li>
-                    <li tabindex="0">LOGROS</li>
-                    <li tabindex="0">UBICACIONES</li>
-                    <li tabindex="0">CONTÁCTANOS</li>
+                    <li tabindex="0"><a href="#">INICIO</a></li>
+                    <li tabindex="0"><a href="#">ÁREAS DE ESPECIALIDAD
+                            <img src="./img/golden-arrow.svg" alt="Arrow" class="header__nav-arrow">
+                            <div class="dropdown-menu">
+                                <ul class="dropdown-menu__inner">
+                                    <li><a href="#">Lesión laboral</a></li>
+                                    <li><a href="#">Trabajo injLoreasury</a></li>
+                                    <li><a href="#">Lesión laboral</a></li>
+                                </ul>
+                        </a>
+                    </li>
+                    <li tabindex="0"><a href="#">OPINIONES</a></li>
+                    <li tabindex="0"><a href="#">LOGROS</a></li>
+                    <li tabindex="0"><a href="#">UBICACIONES</a></li>
+                    <li tabindex="0"><a href="#">CONTÁCTANOS</a></li>
                 </ul>
             </nav>
 
@@ -66,7 +75,23 @@
                                 <a href="./#home" class="header__link">INICIO</a>
                             </li>
                             <li class="header__item">
-                                <a href="#gallery" class="header__link">ÁREAS DE ESPECIALIDAD</a>
+                                <a href="#gallery" class="header__link">
+                                    <div class="header-accordion">
+                                        <div class="header-accordion__top">
+                                            <span>ÁREAS DE ESPECIALIDAD</span>
+                                            <div class="accordion__arrow"><img src="./img/golden-arrow.svg"
+                                                    alt="accordion-arrow">
+                                            </div>
+                                        </div>
+                                        <div class="header-accordion__content">
+                                            <ul>
+                                                <li><a href="#">Lesión laboral</a></li>
+                                                <li><a href="#">Trabajo injLoreasury</a></li>
+                                                <li><a href="#">Lesión laboral</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
                             </li>
                             <li class="header__item">
                                 <a href="#serv" class="header__link">OPINIONES</a>

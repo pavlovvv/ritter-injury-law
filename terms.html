@@ -37,18 +37,25 @@
 
             <nav class="header__nav">
                 <ul class="header__nav-items">
-                    <li tabindex="0">Home</li>
-                    <li tabindex="0">practice areas</li>
-                    <li tabindex="0">Reviews</li>
-                    <li tabindex="0">Results</li>
-                    <li tabindex="0">Location</li>
-                    <li tabindex="0">Contact Us</li>
+                    <li tabindex="0"><a href="#">Home</a></li>
+                    <li tabindex="0"><a href="#">practice areas
+                            <img src="./img/golden-arrow.svg" alt="Arrow" class="header__nav-arrow">
+                            <div class="dropdown-menu">
+                                <ul class="dropdown-menu__inner">
+                                    <li><a href="#">Work injury</a></li>
+                                    <li><a href="#">Work injLoreasury</a></li>
+                                    <li><a href="#">Work injury</a></li>
+                                </ul>
+                        </a>
+                    </li>
+                    <li tabindex="0"><a href="#">Reviews</a></li>
+                    <li tabindex="0"><a href="#">Results</a></li>
+                    <li tabindex="0"><a href="#">Location</a></li>
+                    <li tabindex="0"><a href="#">Contact Us</a></li>
                 </ul>
             </nav>
 
             <div class="header__end">
-                <a href="./indexSP.html" aria-label="Switch to Spanish version" tabindex="0"><button
-                        class="header__button" aria-label="Switch to Spanish version" tabindex="0"></button></a>
                 <div class="burger">
                     <div class="burger__icon">
                         <div class="line1"></div>
@@ -61,7 +68,23 @@
                                 <a href="./#home" class="header__link" aria-hidden="true">Home</a>
                             </li>
                             <li class="header__item">
-                                <a href="#gallery" class="header__link" aria-hidden="true">Practice areas</a>
+                                <a href="#gallery" class="header__link">
+                                    <div class="header-accordion">
+                                        <div class="header-accordion__top">
+                                            <span>Practice areas</span>
+                                            <div class="accordion__arrow"><img src="./img/golden-arrow.svg"
+                                                    alt="accordion-arrow">
+                                            </div>
+                                        </div>
+                                        <div class="header-accordion__content">
+                                            <ul>
+                                                <li><a href="#">Work injury</a></li>
+                                                <li><a href="#">Work injLoreasury</a></li>
+                                                <li><a href="#">Work injury</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
                             </li>
                             <li class="header__item">
                                 <a href="#serv" class="header__link" aria-hidden="true">Reviews</a>
@@ -76,11 +99,6 @@
                                 <a href="#rev" class="header__link" aria-hidden="true">Contact us</a>
                             </li>
                         </ul>
-
-                        <a class="header-drawer-button" href="./indexSP.html"
-                            aria-label="Switch to Spanish version in menu">
-                            <button class="header__button" aria-label="Switch to Spanish version in menu"></button>
-                        </a>
 
                         <div class="burger__menu-footer">
                             <a class="phone" href="tel:786-850-8985">Call Now 786-850-8985</a>
